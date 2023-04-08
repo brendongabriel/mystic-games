@@ -9,19 +9,9 @@ motion_scale = Vector2( 0.6, 1 )
 motion_mirroring = Vector2( 540, 0 )
 
 [node name="Texture2" type="TextureRect" parent="Layer1"]
-margin_left = -234.0
-margin_top = -68.0
-margin_right = 860.0
-margin_bottom = 178.0
-rect_pivot_offset = Vector2( 1931, 134 )
+margin_left = -67.0
+margin_top = -78.0
+margin_right = 912.0
+margin_bottom = 168.0
+rect_pivot_offset = Vector2( 1020, 0 )
 texture = ExtResource( 1 )
-expand = true
-
-[node name="Texture" type="TextureRect" parent="Layer1"]
-margin_left = 1400.0
-margin_top = -68.0
-margin_right = 3350.0
-margin_bottom = 294.0
-rect_pivot_offset = Vector2( 1931, 134 )
-texture = ExtResource( 1 )
-expand = true

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/cogu.png-4c6dc7e671554b8fb612a19056aa75f8.stex"
+path="res://.import/cogu2.png-56babcf56987a3d2d00fb6ee297877f4.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Player/cogu.png"
-dest_files=[ "res://.import/cogu.png-4c6dc7e671554b8fb612a19056aa75f8.stex" ]
+source_file="res://assets/Player/cogu2.png"
+dest_files=[ "res://.import/cogu2.png-56babcf56987a3d2d00fb6ee297877f4.stex" ]
 
 [params]
 
