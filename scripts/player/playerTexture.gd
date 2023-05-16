@@ -43,6 +43,10 @@ func horizontalBehavior(speed: float) -> void:
 
 func _on_animation_finished(anim_name: String) -> void:
 	print(anim_name)
+	if anim_name == "attack":
+		on_action = false
+		parent.can_attack = true
+		parent.set_physics_process(true)
 	if anim_name == "hit":
 		on_action = false
 		parent.set_physics_process(true)
