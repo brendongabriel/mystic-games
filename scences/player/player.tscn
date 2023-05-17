@@ -8,7 +8,7 @@
 [ext_resource path="res://assets/Player/explorador.png" type="Texture" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 5.5, 9.5 )
+extents = Vector2( 8.5, 12 )
 
 [sub_resource type="Animation" id=2]
 length = 0.001
@@ -130,10 +130,10 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.001, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
-"values": [ 0 ]
+"values": [ 0, 0, 0 ]
 }
 tracks/4/type = "method"
 tracks/4/path = NodePath("..")
@@ -142,11 +142,14 @@ tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0.1 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
 "values": [ {
 "args": [ false ],
 "method": "set_physics_process"
+}, {
+"args": [  ],
+"method": "spawn_projectile"
 } ]
 }
 
@@ -310,7 +313,7 @@ texture = ExtResource( 7 )
 script = ExtResource( 4 )
 
 [node name="Collision" type="CollisionShape2D" parent="."]
-position = Vector2( -0.5, 2.5 )
+position = Vector2( 5.5, 1 )
 shape = SubResource( 1 )
 
 [node name="Animation" type="AnimationPlayer" parent="."]
@@ -330,5 +333,8 @@ limit_bottom = 192
 drag_margin_h_enabled = true
 drag_margin_v_enabled = true
 editor_draw_drag_margin = true
+
+[node name="SpawnPoint" type="Position2D" parent="."]
+position = Vector2( 14, 1 )
 
 [connection signal="animation_finished" from="Animation" to="Texture" method="_on_animation_finished"]
