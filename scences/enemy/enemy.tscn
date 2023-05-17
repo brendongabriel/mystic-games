@@ -117,6 +117,7 @@ script = ExtResource( 2 )
 move_speed = 20
 distance_threshold = 22
 enemy_damage = 10
+health = 20
 attack_cooldown = 1.5
 
 [node name="Texture" type="Sprite" parent="."]

@@ -23,11 +23,11 @@ func animate(velocity: Vector2) -> void:
 func verifyOrientation(speed: float) -> void:
 	if speed > 0:
 		flip_h = false
-		spawn_point.position = Vector2(14.0,1.0)
+		spawn_point.position = Vector2(14, 0)
 		
 	if speed < 0:
 		flip_h = true
-		spawn_point.position = Vector2(-1.0,1.0)
+		spawn_point.position = Vector2(-1, 0)
 		
 func action_behavior(action: String) -> void:
 	on_action = true

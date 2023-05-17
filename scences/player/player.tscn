@@ -298,11 +298,12 @@ tracks/3/keys = {
 "values": [ 0, 1, 2 ]
 }
 
-[node name="Player" type="KinematicBody2D"]
+[node name="Player" type="KinematicBody2D" groups=["player"]]
 position = Vector2( -5, -2 )
 script = ExtResource( 2 )
 moveSpeed = 90
 jumpSpeed = 200
+player_damage = 10
 gravitySpeed = 500
 health = 50
 
@@ -335,6 +336,7 @@ drag_margin_v_enabled = true
 editor_draw_drag_margin = true
 
 [node name="SpawnPoint" type="Position2D" parent="."]
+unique_name_in_owner = true
 position = Vector2( 14, 1 )
 
 [connection signal="animation_finished" from="Animation" to="Texture" method="_on_animation_finished"]

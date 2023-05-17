@@ -11,10 +11,10 @@ var can_attack: bool = true
 
 export(int) var moveSpeed
 export(int) var jumpSpeed
-
+export(int) var player_damage
 export(int) var gravitySpeed
 export(int) var health
-
+export(float) var attack_cooldown
 
 func _physics_process(delta: float) -> void:
 	move()
@@ -38,7 +38,7 @@ func jump(delta: float) -> void:
 		velocity.y = -jumpSpeed
 
 func spawn_projectile() -> void:
-	var projectile: Arrow = PROJECTILE.instance()
+	var projectile = PROJECTILE.instance()
 	projectile.direction = sign(spawn_point.position.x)
 	get_tree().root.call_deferred("add_child", projectile)
 	projectile.global_position = spawn_point.global_position
@@ -50,11 +50,9 @@ func attack() -> void:
 
 func update_health(value: int) -> void:
 	health -= value
-	
 	if health <= 0:
 		var _reload: bool = get_tree().change_scene("res://scences/management/gameLevel.tscn")
 		return
-		
 	sprite.action_behavior("hit")
 	
 func verify_heigth() -> void:
